@@ -1,0 +1,130 @@
+erDiagram
+    ROLE ||..o{ APP_USER : role_id
+    CATEGORY ||..o{ ITEM : category_id
+    ITEM ||--o{ ITEM_SUPPLIER : item_id
+    SUPPLIER ||--o{ ITEM_SUPPLIER : supplier_id
+    LOCATION |o..o{ LOCATION : parent_id
+    ITEM ||..o{ LOT : item_id
+    SUPPLIER |o..o{ LOT : supplier_id
+    LOT ||--o{ STOCK : lot_id
+    LOCATION ||--o{ STOCK : location_id
+    LOT ||..o{ STOCK_TRANSACTION : lot_id
+    LOCATION ||..o{ STOCK_TRANSACTION : location_id
+    LOCATION |o..o{ STOCK_TRANSACTION : to_location_id
+    APP_USER ||..o{ STOCK_TRANSACTION : user_id
+    ITEM |o..o{ ALERT : item_id
+    LOT |o..o{ ALERT : lot_id
+    APP_USER |o..o{ ALERT : resolved_by
+    APP_USER |o..o{ AUDIT_LOG : user_id
+    SUPPLIER ||..o{ PURCHASE_ORDER : supplier_id
+    APP_USER ||..o{ PURCHASE_ORDER : created_by
+    APP_USER |o..o{ PURCHASE_ORDER : approved_by
+    PURCHASE_ORDER ||--o{ PO_LINE : po_id
+    ITEM ||..o{ PO_LINE : item_id
+    LOCATION |o..o{ EQUIPMENT : location_id
+    EQUIPMENT ||..o{ MAINTENANCE : equipment_id
+    APP_USER |o..o{ MAINTENANCE : performed_by
+
+    ROLE {
+        smallint role_id PK
+        varchar role_name UK
+    }
+    APP_USER {
+        integer user_id PK
+        smallint role_id FK
+        varchar username UK
+        boolean is_active
+    }
+    CATEGORY {
+        smallint category_id PK
+        varchar name UK
+    }
+    ITEM {
+        integer item_id PK
+        smallint category_id FK
+        varchar catalog_no UK
+        varchar item_type
+        varchar unit
+        numeric min_stock
+    }
+    SUPPLIER {
+        integer supplier_id PK
+        varchar name UK
+        smallint lead_time_days
+    }
+    ITEM_SUPPLIER {
+        integer item_id PK,FK
+        integer supplier_id PK,FK
+        numeric unit_price
+        char currency
+    }
+    LOCATION {
+        integer location_id PK
+        integer parent_id FK
+        varchar name
+        varchar location_type
+    }
+    LOT {
+        integer lot_id PK
+        integer item_id FK
+        integer supplier_id FK
+        varchar lot_no
+        date expiry_date
+    }
+    STOCK {
+        integer lot_id PK,FK
+        integer location_id PK,FK
+        numeric quantity
+    }
+    STOCK_TRANSACTION {
+        bigint txn_id PK
+        integer lot_id FK
+        integer location_id FK
+        integer to_location_id FK
+        integer user_id FK
+        varchar txn_type
+        numeric quantity
+    }
+    ALERT {
+        bigint alert_id PK
+        integer item_id FK
+        integer lot_id FK
+        integer resolved_by FK
+        varchar alert_type
+        varchar status
+    }
+    AUDIT_LOG {
+        bigint log_id PK
+        integer user_id FK
+        varchar table_name
+        varchar record_id
+        varchar action
+    }
+    PURCHASE_ORDER {
+        integer po_id PK
+        integer supplier_id FK
+        integer created_by FK
+        integer approved_by FK
+        varchar status
+    }
+    PO_LINE {
+        integer po_id PK,FK
+        smallint line_no PK
+        integer item_id FK
+        numeric quantity
+        numeric unit_price
+    }
+    EQUIPMENT {
+        integer equipment_id PK
+        integer location_id FK
+        varchar serial_no UK
+        varchar status
+    }
+    MAINTENANCE {
+        integer maint_id PK
+        integer equipment_id FK
+        integer performed_by FK
+        varchar maint_type
+        date due_date
+        date done_date
+    }

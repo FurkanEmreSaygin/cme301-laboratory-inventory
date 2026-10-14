@@ -1,0 +1,479 @@
+BEGIN
+SET
+CREATE TABLE
+CREATE FUNCTION
+CREATE FUNCTION
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+SELECT 1
+DELETE 1
+INSERT 0 1
+ expect_ok 
+-----------
+ 
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+ expect_err 
+------------
+ 
+(1 row)
+
+INSERT 0 1
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_ok 
+-----------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+DO
+DO
+GRANT
+CREATE FUNCTION
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+ as_role 
+---------
+ 
+(1 row)
+
+                          id                          | result |                                     info                                      
+------------------------------------------------------+--------+-------------------------------------------------------------------------------
+ C01 batch of 3, third fails: whole batch rolled back | PASS   | batch rows left: 0
+ F01 duplicate catalog_no                             | PASS   | 23505: duplicate key value violates unique constraint "item_catalog_no_key"
+ F02 NULL name                                        | PASS   | 23502: null value in column "name" of relation "item" violates not-null const
+ F03 unknown category (FK)                            | PASS   | 23503: insert or update on table "item" violates foreign key constraint "item
+ F04 invalid item_type                                | PASS   | 23514: new row for relation "item" violates check constraint "item_item_type_
+ F05 reagent without temperature                      | PASS   | 23514: new row for relation "item" violates check constraint "ck_reagent_temp
+ F06 CAS number on a reagent                          | PASS   | 23514: new row for relation "item" violates check constraint "ck_chemical_onl
+ F07 pack_size on a chemical                          | PASS   | 23514: new row for relation "item" violates check constraint "ck_consumable_o
+ F08 negative min_stock                               | PASS   | 23514: new row for relation "item" violates check constraint "item_min_stock_
+ F09 expiry before receipt                            | PASS   | 23514: new row for relation "lot" violates check constraint "ck_lot_dates"
+ F10 duplicate lot number for item                    | PASS   | 23505: duplicate key value violates unique constraint "uq_lot"
+ F11 zero initial quantity                            | PASS   | 23514: new row for relation "lot" violates check constraint "lot_initial_qty_
+ F12 negative stock                                   | PASS   | 23514: new row for relation "stock" violates check constraint "stock_quantity
+ F13 transfer without target                          | PASS   | 23514: new row for relation "stock_transaction" violates check constraint "ck
+ F14 PO approved by its creator                       | PASS   | 23514: new row for relation "purchase_order" violates check constraint "ck_po
+ F15 delete item that has lots (FK)                   | PASS   | 23503: update or delete on table "item" violates foreign key constraint "item
+ F16 duplicate sibling location                       | PASS   | 23505: duplicate key value violates unique constraint "location_parent_id_nam
+ F17 alert without target                             | PASS   | 23514: new row for relation "alert" violates check constraint "ck_alert_targe
+ F18 duplicate username                               | PASS   | 23505: duplicate key value violates unique constraint "app_user_username_key"
+ F19 PO line deleted with its PO (cascade)            | PASS   | target order removed
+ P01 FEFO issue 8 of item 1                           | PASS   | ok
+ P01b takes 5 from T-A1 first, then 3 from T-A2       | PASS   | T-A1=0.00 T-A2=12.00
+ P01c two ISSUE rows written                          | PASS   | 
+ P02 over-issue is refused                            | PASS   | P0001: Insufficient unexpired stock: short by 988.00
+ P02b over-issue leaves stock unchanged (rollback)    | PASS   | 
+ P03 expired lot is never issued                      | PASS   | P0001: Insufficient unexpired stock: short by 1
+ P04 negative quantity                                | PASS   | 22023: Quantity must be positive with at most two decimal places
+ P05 zero quantity                                    | PASS   | 22023: Quantity must be positive with at most two decimal places
+ P06 unknown user                                     | PASS   | 23503: Unknown user 999
+ P07 unknown item (nothing to issue)                  | PASS   | 23503: Unknown or inactive item 999
+ P08 goods receipt                                    | PASS   | ok
+ P09 receipt with expired date                        | PASS   | 22023: Receipt requires a nonempty lot number and future expiry date
+ R01 viewer reads item                                | PASS   | lab_viewer: allowed
+ R02 viewer reads stock table                         | PASS   | lab_viewer: denied
+ R03 viewer reads view                                | PASS   | lab_viewer: allowed
+ R04 viewer cannot see suppliers                      | PASS   | lab_viewer: denied
+ R05 viewer cannot insert item                        | PASS   | lab_viewer: denied
+ R06 viewer cannot issue                              | PASS   | lab_viewer: denied
+ R07 technician issues stock                          | PASS   | lab_technician: allowed
+ R08 technician cannot UPDATE stock directly          | PASS   | lab_technician: denied
+ R09 technician cannot DELETE history                 | PASS   | lab_technician: denied
+ R10 technician cannot read audit_log                 | PASS   | lab_technician: denied
+ R11 technician cannot read password hashes           | PASS   | lab_technician: denied
+ R12 technician cannot create item                    | PASS   | lab_technician: denied
+ R13 technician creates DRAFT PO                      | PASS   | lab_technician: allowed
+ R14 technician cannot set PO status                  | PASS   | lab_technician: denied
+ R15 manager cannot read password hashes              | PASS   | lab_manager: denied
+ R16 manager reads usernames                          | PASS   | lab_manager: allowed
+ R17 manager approves PO                              | PASS   | lab_manager: allowed
+ R18 manager adds an item                             | PASS   | lab_manager: allowed
+ R19 manager cannot UPDATE stock directly             | PASS   | lab_manager: denied
+ R20 manager cannot UPDATE audit_log                  | PASS   | lab_manager: denied
+ R21 admin cannot DELETE audit_log                    | PASS   | lab_admin: denied
+ R22 admin manages users                              | PASS   | lab_admin: allowed
+ R23 admin cannot UPDATE stock directly               | PASS   | lab_admin: denied
+ R24 admin issues stock                               | PASS   | lab_admin: allowed
+ R25 PUBLIC cannot execute procedure                  | PASS   | public_nobody: denied
+(57 rows)
+
+ passed | failed | total 
+--------+--------+-------
+     57 |      0 |    57
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_ok 
+-----------
+ 
+(1 row)
+
+INSERT 0 1
+ expect_ok 
+-----------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+ expect_err 
+------------
+ 
+(1 row)
+
+UPDATE 1
+ expect_err 
+------------
+ 
+(1 row)
+
+UPDATE 1
+INSERT 0 1
+SELECT 1
+CALL
+CALL
+INSERT 0 1
+INSERT 0 1
+                          id                          | result |                                     info                                      
+------------------------------------------------------+--------+-------------------------------------------------------------------------------
+ C01 batch of 3, third fails: whole batch rolled back | PASS   | batch rows left: 0
+ E01 same-location transfer                           | PASS   | 22023: Transfer locations must differ
+ E02 mismatched receipt metadata                      | PASS   | 22023: Existing lot expiry or supplier differs
+ E03 self-parent location                             | PASS   | 23514: Location hierarchy cannot contain a cycle
+ E04 multi-node location cycle                        | PASS   | 23514: Location hierarchy cannot contain a cycle
+ E05 transfer                                         | PASS   | ok
+ E05b transfer updates both locations                 | PASS   | 10 source / 2 target
+ E06 disposal                                         | PASS   | ok
+ E07 excessive disposal                               | PASS   | P0001: Insufficient stock for disposal
+ E08 fractional precision                             | PASS   | 22023: Quantity must be positive with at most two decimal places
+ E09 inactive actor                                   | PASS   | 42501: Inactive user
+ E10 stock matches complete ledger                    | PASS   | all lot / location balances
+ E11 alert refresh is idempotent                      | PASS   | no duplicate active alerts
+ E12 audit trigger writes records                     | PASS   | stock audit present
+ F01 duplicate catalog_no                             | PASS   | 23505: duplicate key value violates unique constraint "item_catalog_no_key"
+ F02 NULL name                                        | PASS   | 23502: null value in column "name" of relation "item" violates not-null const
+ F03 unknown category (FK)                            | PASS   | 23503: insert or update on table "item" violates foreign key constraint "item
+ F04 invalid item_type                                | PASS   | 23514: new row for relation "item" violates check constraint "item_item_type_
+ F05 reagent without temperature                      | PASS   | 23514: new row for relation "item" violates check constraint "ck_reagent_temp
+ F06 CAS number on a reagent                          | PASS   | 23514: new row for relation "item" violates check constraint "ck_chemical_onl
+ F07 pack_size on a chemical                          | PASS   | 23514: new row for relation "item" violates check constraint "ck_consumable_o
+ F08 negative min_stock                               | PASS   | 23514: new row for relation "item" violates check constraint "item_min_stock_
+ F09 expiry before receipt                            | PASS   | 23514: new row for relation "lot" violates check constraint "ck_lot_dates"
+ F10 duplicate lot number for item                    | PASS   | 23505: duplicate key value violates unique constraint "uq_lot"
+ F11 zero initial quantity                            | PASS   | 23514: new row for relation "lot" violates check constraint "lot_initial_qty_
+ F12 negative stock                                   | PASS   | 23514: new row for relation "stock" violates check constraint "stock_quantity
+ F13 transfer without target                          | PASS   | 23514: new row for relation "stock_transaction" violates check constraint "ck
+ F14 PO approved by its creator                       | PASS   | 23514: new row for relation "purchase_order" violates check constraint "ck_po
+ F15 delete item that has lots (FK)                   | PASS   | 23503: update or delete on table "item" violates foreign key constraint "item
+ F16 duplicate sibling location                       | PASS   | 23505: duplicate key value violates unique constraint "location_parent_id_nam
+ F17 alert without target                             | PASS   | 23514: new row for relation "alert" violates check constraint "ck_alert_targe
+ F18 duplicate username                               | PASS   | 23505: duplicate key value violates unique constraint "app_user_username_key"
+ F19 PO line deleted with its PO (cascade)            | PASS   | target order removed
+ P01 FEFO issue 8 of item 1                           | PASS   | ok
+ P01b takes 5 from T-A1 first, then 3 from T-A2       | PASS   | T-A1=0.00 T-A2=12.00
+ P01c two ISSUE rows written                          | PASS   | 
+ P02 over-issue is refused                            | PASS   | P0001: Insufficient unexpired stock: short by 988.00
+ P02b over-issue leaves stock unchanged (rollback)    | PASS   | 
+ P03 expired lot is never issued                      | PASS   | P0001: Insufficient unexpired stock: short by 1
+ P04 negative quantity                                | PASS   | 22023: Quantity must be positive with at most two decimal places
+ P05 zero quantity                                    | PASS   | 22023: Quantity must be positive with at most two decimal places
+ P06 unknown user                                     | PASS   | 23503: Unknown user 999
+ P07 unknown item (nothing to issue)                  | PASS   | 23503: Unknown or inactive item 999
+ P08 goods receipt                                    | PASS   | ok
+ P09 receipt with expired date                        | PASS   | 22023: Receipt requires a nonempty lot number and future expiry date
+ R01 viewer reads item                                | PASS   | lab_viewer: allowed
+ R02 viewer reads stock table                         | PASS   | lab_viewer: denied
+ R03 viewer reads view                                | PASS   | lab_viewer: allowed
+ R04 viewer cannot see suppliers                      | PASS   | lab_viewer: denied
+ R05 viewer cannot insert item                        | PASS   | lab_viewer: denied
+ R06 viewer cannot issue                              | PASS   | lab_viewer: denied
+ R07 technician issues stock                          | PASS   | lab_technician: allowed
+ R08 technician cannot UPDATE stock directly          | PASS   | lab_technician: denied
+ R09 technician cannot DELETE history                 | PASS   | lab_technician: denied
+ R10 technician cannot read audit_log                 | PASS   | lab_technician: denied
+ R11 technician cannot read password hashes           | PASS   | lab_technician: denied
+ R12 technician cannot create item                    | PASS   | lab_technician: denied
+ R13 technician creates DRAFT PO                      | PASS   | lab_technician: allowed
+ R14 technician cannot set PO status                  | PASS   | lab_technician: denied
+ R15 manager cannot read password hashes              | PASS   | lab_manager: denied
+ R16 manager reads usernames                          | PASS   | lab_manager: allowed
+ R17 manager approves PO                              | PASS   | lab_manager: allowed
+ R18 manager adds an item                             | PASS   | lab_manager: allowed
+ R19 manager cannot UPDATE stock directly             | PASS   | lab_manager: denied
+ R20 manager cannot UPDATE audit_log                  | PASS   | lab_manager: denied
+ R21 admin cannot DELETE audit_log                    | PASS   | lab_admin: denied
+ R22 admin manages users                              | PASS   | lab_admin: allowed
+ R23 admin cannot UPDATE stock directly               | PASS   | lab_admin: denied
+ R24 admin issues stock                               | PASS   | lab_admin: allowed
+ R25 PUBLIC cannot execute procedure                  | PASS   | public_nobody: denied
+(70 rows)
+
+ passed | failed | total 
+--------+--------+-------
+     70 |      0 |    70
+(1 row)
+
+DO
+ROLLBACK
+

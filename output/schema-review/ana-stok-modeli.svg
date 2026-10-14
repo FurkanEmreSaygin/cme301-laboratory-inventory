@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1580" height="1300" viewBox="0 0 1580 1300">
+<rect width="100%" height="100%" fill="#F5F7FB"/>
+<text x="60" y="53" fill="#63728A" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">CME301  /  DATABASE DESIGN</text>
+<text x="60" y="110" fill="#17263C" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Laboratuvar envanter sistemi</text>
+<text x="60" y="153" fill="#63728A" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="400">Mevcut SQL şeması • Ana stok modeli • 9 / 16 tablo</text>
+<polyline points="370,315 430,315" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="377.0,308.0 377.0,322.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="386.0,308.0 386.0,322.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="414.0,315.0 427.0,323.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="414.0,315.0 427.0,315.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="414.0,315.0 427.0,307.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="404.0" cy="315.0" r="5" fill="#F5F7FB" stroke="#338B80" stroke-width="2"/>
+<polyline points="800,315 740,315" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="793.0,322.0 793.0,308.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="784.0,322.0 784.0,308.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="756.0,315.0 743.0,307.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="756.0,315.0 743.0,315.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="756.0,315.0 743.0,323.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="766.0" cy="315.0" r="5" fill="#F5F7FB" stroke="#338B80" stroke-width="2"/>
+<polyline points="1170,315 1110,315" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="1163.0,322.0 1163.0,308.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1154.0,322.0 1154.0,308.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1126.0,315.0 1113.0,307.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1126.0,315.0 1113.0,315.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1126.0,315.0 1113.0,323.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="1136.0" cy="315.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<polyline points="955,440 955,620" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="962.0,447.0 948.0,447.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="962.0,456.0 948.0,456.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="955.0,604.0 947.0,617.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="955.0,604.0 955.0,617.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="955.0,604.0 963.0,617.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="955.0" cy="594.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<rect x="974" y="547" width="228" height="27" rx="4" fill="#F5F7FB"/>
+<text x="980" y="566" fill="#6B7D94" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">bir ürün, birden çok lot</text>
+<polyline points="215,440 215,520 875,520 875,620" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="222.0,447.0 208.0,447.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="215.0" cy="460.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<polyline points="875.0,604.0 867.0,617.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="875.0,604.0 875.0,617.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="875.0,604.0 883.0,617.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="875.0" cy="594.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<rect x="354" y="479" width="228" height="27" rx="4" fill="#F5F7FB"/>
+<text x="360" y="498" fill="#6B7D94" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">tedarik eder · opsiyonel</text>
+<polyline points="370,720 430,720" fill="none" stroke="#8370A8" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="377.0,713.0 377.0,727.0" fill="none" stroke="#8370A8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="386.0,713.0 386.0,727.0" fill="none" stroke="#8370A8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="414.0,720.0 427.0,728.0" fill="none" stroke="#8370A8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="414.0,720.0 427.0,720.0" fill="none" stroke="#8370A8" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="414.0,720.0 427.0,712.0" fill="none" stroke="#8370A8" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="404.0" cy="720.0" r="5" fill="#F5F7FB" stroke="#8370A8" stroke-width="2"/>
+<polyline points="800,720 740,720" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="793.0,727.0 793.0,713.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="784.0,727.0 784.0,713.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="756.0,720.0 743.0,712.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="756.0,720.0 743.0,720.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="756.0,720.0 743.0,728.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="766.0" cy="720.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<polyline points="1110,720 1170,720" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1117.0,713.0 1117.0,727.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1126.0,713.0 1126.0,727.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1154.0,720.0 1167.0,728.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1154.0,720.0 1167.0,720.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1154.0,720.0 1167.0,712.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="1144.0" cy="720.0" r="5" fill="#F5F7FB" stroke="#338B80" stroke-width="2"/>
+<polyline points="1325,1010 1325,840" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1318.0,1003.0 1332.0,1003.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1318.0,994.0 1332.0,994.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1325.0,856.0 1333.0,843.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1325.0,856.0 1325.0,843.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1325.0,856.0 1317.0,843.0" fill="none" stroke="#338B80" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="1325.0" cy="866.0" r="5" fill="#F5F7FB" stroke="#338B80" stroke-width="2"/>
+<rect x="1341" y="917" width="192" height="27" rx="4" fill="#F5F7FB"/>
+<text x="1347" y="936" fill="#338B80" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">konum bazında miktar</text>
+<polyline points="1170,1100 1050,1100 1050,940 530,940 530,840" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="1163.0,1107.0 1163.0,1093.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1154.0,1107.0 1154.0,1093.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="530.0,856.0 538.0,843.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="530.0,856.0 530.0,843.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="530.0,856.0 522.0,843.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="530.0" cy="866.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<rect x="644" y="945" width="201" height="27" rx="4" fill="#F5F7FB"/>
+<text x="650" y="964" fill="#6B7D94" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">kaynak / işlem konumu</text>
+<polyline points="1170,1060 1090,1060 1090,900 600,900 600,840" fill="none" stroke="#889AB2" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="1163.0,1067.0 1163.0,1053.0" fill="none" stroke="#889AB2" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="1150.0" cy="1060.0" r="5" fill="#F5F7FB" stroke="#889AB2" stroke-width="2"/>
+<polyline points="600.0,856.0 608.0,843.0" fill="none" stroke="#889AB2" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="600.0,856.0 600.0,843.0" fill="none" stroke="#889AB2" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="600.0,856.0 592.0,843.0" fill="none" stroke="#889AB2" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="600.0" cy="866.0" r="5" fill="#F5F7FB" stroke="#889AB2" stroke-width="2"/>
+<rect x="644" y="868" width="237" height="27" rx="4" fill="#F5F7FB"/>
+<text x="650" y="887" fill="#889AB2" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">hedef · yalnızca TRANSFER</text>
+<polyline points="1480,1070 1530,1070 1530,1160 1480,1160" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="1487.0,1063.0 1487.0,1077.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="1500.0" cy="1070.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<polyline points="1496.0,1160.0 1483.0,1152.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1496.0,1160.0 1483.0,1160.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="1496.0,1160.0 1483.0,1168.0" fill="none" stroke="#6B7D94" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="1506.0" cy="1160.0" r="5" fill="#F5F7FB" stroke="#6B7D94" stroke-width="2"/>
+<text x="1495" y="1205" fill="#63728A" font-family="Consolas, monospace" font-size="15" font-weight="400">parent_id</text>
+<rect x="63" y="225" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="60" y="220" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="61" y="221" width="308" height="48" rx="11" fill="#287D74"/>
+<rect x="61" y="250" width="308" height="20" rx="0" fill="#287D74"/>
+<text x="78" y="252" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">SUPPLIER</text>
+<text x="76" y="294" fill="#287D74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="143" y="296" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">supplier_id</text>
+<text x="143" y="319" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">name</text>
+<text x="143" y="342" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">lead_time_days</text>
+<rect x="433" y="225" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="430" y="220" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="431" y="221" width="308" height="48" rx="11" fill="#287D74"/>
+<rect x="431" y="250" width="308" height="20" rx="0" fill="#287D74"/>
+<text x="448" y="252" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">ITEM_SUPPLIER</text>
+<text x="446" y="294" fill="#287D74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK/FK</text>
+<text x="513" y="296" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">item_id</text>
+<text x="446" y="317" fill="#287D74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK/FK</text>
+<text x="513" y="319" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">supplier_id</text>
+<text x="513" y="342" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">unit_price</text>
+<text x="513" y="365" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">currency</text>
+<rect x="803" y="225" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="800" y="220" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="801" y="221" width="308" height="48" rx="11" fill="#345F97"/>
+<rect x="801" y="250" width="308" height="20" rx="0" fill="#345F97"/>
+<text x="818" y="252" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">ITEM</text>
+<text x="816" y="294" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="883" y="296" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">item_id</text>
+<text x="816" y="317" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="883" y="319" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">category_id</text>
+<text x="883" y="342" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">catalog_no</text>
+<text x="883" y="365" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">item_type</text>
+<text x="883" y="388" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">unit</text>
+<text x="883" y="411" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">min_stock</text>
+<rect x="1173" y="225" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="1170" y="220" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="1171" y="221" width="308" height="48" rx="11" fill="#345F97"/>
+<rect x="1171" y="250" width="308" height="20" rx="0" fill="#345F97"/>
+<text x="1188" y="252" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">CATEGORY</text>
+<text x="1186" y="294" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="1253" y="296" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">category_id</text>
+<text x="1253" y="319" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">name</text>
+<rect x="63" y="625" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="60" y="620" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="61" y="621" width="308" height="48" rx="11" fill="#796094"/>
+<rect x="61" y="650" width="308" height="20" rx="0" fill="#796094"/>
+<text x="78" y="652" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">APP_USER</text>
+<text x="76" y="694" fill="#796094" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="143" y="696" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">user_id</text>
+<text x="76" y="717" fill="#796094" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="143" y="719" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">role_id</text>
+<text x="143" y="742" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">username</text>
+<rect x="433" y="625" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="430" y="620" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="431" y="621" width="308" height="48" rx="11" fill="#345F97"/>
+<rect x="431" y="650" width="308" height="20" rx="0" fill="#345F97"/>
+<text x="448" y="652" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">STOCK_TRANSACTION</text>
+<text x="446" y="694" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="513" y="696" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">txn_id</text>
+<text x="446" y="717" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="513" y="719" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">lot_id</text>
+<text x="446" y="740" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="513" y="742" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">location_id</text>
+<text x="446" y="763" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="513" y="765" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">to_location_id</text>
+<text x="446" y="786" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="513" y="788" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">user_id</text>
+<text x="513" y="811" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">txn_type</text>
+<text x="513" y="834" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">quantity</text>
+<rect x="803" y="625" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="800" y="620" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="801" y="621" width="308" height="48" rx="11" fill="#345F97"/>
+<rect x="801" y="650" width="308" height="20" rx="0" fill="#345F97"/>
+<text x="818" y="652" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">LOT</text>
+<text x="816" y="694" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="883" y="696" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">lot_id</text>
+<text x="816" y="717" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="883" y="719" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">item_id</text>
+<text x="816" y="740" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="883" y="742" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">supplier_id</text>
+<text x="883" y="765" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">lot_no</text>
+<text x="883" y="788" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">expiry_date</text>
+<rect x="1173" y="625" width="310" height="220" rx="12" fill="#E4E9F0"/>
+<rect x="1170" y="620" width="310" height="220" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="1171" y="621" width="308" height="48" rx="11" fill="#287D74"/>
+<rect x="1171" y="650" width="308" height="20" rx="0" fill="#287D74"/>
+<text x="1188" y="652" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">STOCK</text>
+<text x="1186" y="694" fill="#287D74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK/FK</text>
+<text x="1253" y="696" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">lot_id</text>
+<text x="1186" y="717" fill="#287D74" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK/FK</text>
+<text x="1253" y="719" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">location_id</text>
+<text x="1253" y="742" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">quantity</text>
+<rect x="1173" y="1015" width="310" height="180" rx="12" fill="#E4E9F0"/>
+<rect x="1170" y="1010" width="310" height="180" rx="12" fill="#FFFFFF" stroke="#D8E0EA"/>
+<rect x="1171" y="1011" width="308" height="48" rx="11" fill="#345F97"/>
+<rect x="1171" y="1040" width="308" height="20" rx="0" fill="#345F97"/>
+<text x="1188" y="1042" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700">LOCATION</text>
+<text x="1186" y="1084" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">PK</text>
+<text x="1253" y="1086" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">location_id</text>
+<text x="1186" y="1107" fill="#345F97" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">FK</text>
+<text x="1253" y="1109" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">parent_id</text>
+<text x="1253" y="1132" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">name</text>
+<text x="1253" y="1155" fill="#17263C" font-family="Consolas, monospace" font-size="18" font-weight="400">location_type</text>
+<text x="60" y="1036" fill="#63728A" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">SUNUMDAKİ ANA FİKİR</text>
+<text x="60" y="1081" fill="#17263C" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">Ürün → Lot → Konumdaki stok</text>
+<text x="60" y="1117" fill="#63728A" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="400">STOCK mevcut miktarı; STOCK_TRANSACTION hareket geçmişini tutar.</text>
+<text x="60" y="1148" fill="#63728A" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Alanlar sadeleştirilmiştir. Destek tabloları tam ER kaynağında yer alır.</text>
+<polyline points="60,1205 1480,1205" fill="none" stroke="#D8E0EA" stroke-width="1" stroke-linejoin="round"/>
+<text x="60" y="1247" fill="#63728A" font-family="Consolas, monospace" font-size="17" font-weight="400">||  bir     o|  sıfır veya bir     o&lt;  sıfır veya çok</text>
+<text x="810" y="1246" fill="#63728A" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">Düz çizgi: FK, bileşik PK’nin parçası • Kesikli: diğer FK</text>
+</svg>

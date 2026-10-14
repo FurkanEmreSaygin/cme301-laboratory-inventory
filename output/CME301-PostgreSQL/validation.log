@@ -1,0 +1,19 @@
+                                 version                                  
+--------------------------------------------------------------------------
+ PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+(1 row)
+
+ tables 
+--------
+     16
+(1 row)
+
+ foreign_keys 
+--------------
+           25
+(1 row)
+
+ lot_id | location_id | stock_qty | ledger_qty | difference 
+--------+-------------+-----------+------------+------------
+(0 rows)
+

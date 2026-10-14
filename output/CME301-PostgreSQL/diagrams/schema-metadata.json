@@ -1,0 +1,147 @@
+{
+  "tables": [
+    "alert",
+    "app_user",
+    "audit_log",
+    "category",
+    "equipment",
+    "item",
+    "item_supplier",
+    "location",
+    "lot",
+    "maintenance",
+    "po_line",
+    "purchase_order",
+    "role",
+    "stock",
+    "stock_transaction",
+    "supplier"
+  ],
+  "foreign_keys": [
+    {
+      "name": "app_user_role_id_fkey",
+      "table": "app_user",
+      "reference": "role"
+    },
+    {
+      "name": "alert_resolved_by_fkey",
+      "table": "alert",
+      "reference": "app_user"
+    },
+    {
+      "name": "item_category_id_fkey",
+      "table": "item",
+      "reference": "category"
+    },
+    {
+      "name": "item_supplier_item_id_fkey",
+      "table": "item_supplier",
+      "reference": "item"
+    },
+    {
+      "name": "item_supplier_supplier_id_fkey",
+      "table": "item_supplier",
+      "reference": "supplier"
+    },
+    {
+      "name": "location_parent_id_fkey",
+      "table": "location",
+      "reference": "location"
+    },
+    {
+      "name": "lot_item_id_fkey",
+      "table": "lot",
+      "reference": "item"
+    },
+    {
+      "name": "lot_supplier_id_fkey",
+      "table": "lot",
+      "reference": "supplier"
+    },
+    {
+      "name": "stock_lot_id_fkey",
+      "table": "stock",
+      "reference": "lot"
+    },
+    {
+      "name": "stock_location_id_fkey",
+      "table": "stock",
+      "reference": "location"
+    },
+    {
+      "name": "stock_transaction_lot_id_fkey",
+      "table": "stock_transaction",
+      "reference": "lot"
+    },
+    {
+      "name": "stock_transaction_location_id_fkey",
+      "table": "stock_transaction",
+      "reference": "location"
+    },
+    {
+      "name": "stock_transaction_to_location_id_fkey",
+      "table": "stock_transaction",
+      "reference": "location"
+    },
+    {
+      "name": "stock_transaction_user_id_fkey",
+      "table": "stock_transaction",
+      "reference": "app_user"
+    },
+    {
+      "name": "alert_item_id_fkey",
+      "table": "alert",
+      "reference": "item"
+    },
+    {
+      "name": "alert_lot_id_fkey",
+      "table": "alert",
+      "reference": "lot"
+    },
+    {
+      "name": "audit_log_user_id_fkey",
+      "table": "audit_log",
+      "reference": "app_user"
+    },
+    {
+      "name": "purchase_order_supplier_id_fkey",
+      "table": "purchase_order",
+      "reference": "supplier"
+    },
+    {
+      "name": "purchase_order_created_by_fkey",
+      "table": "purchase_order",
+      "reference": "app_user"
+    },
+    {
+      "name": "purchase_order_approved_by_fkey",
+      "table": "purchase_order",
+      "reference": "app_user"
+    },
+    {
+      "name": "po_line_po_id_fkey",
+      "table": "po_line",
+      "reference": "purchase_order"
+    },
+    {
+      "name": "po_line_item_id_fkey",
+      "table": "po_line",
+      "reference": "item"
+    },
+    {
+      "name": "equipment_location_id_fkey",
+      "table": "equipment",
+      "reference": "location"
+    },
+    {
+      "name": "maintenance_equipment_id_fkey",
+      "table": "maintenance",
+      "reference": "equipment"
+    },
+    {
+      "name": "maintenance_performed_by_fkey",
+      "table": "maintenance",
+      "reference": "app_user"
+    }
+  ]
+}

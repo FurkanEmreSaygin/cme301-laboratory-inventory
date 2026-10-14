@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram version="1" name="CME301 - Stock and FEFO">
+  <entities>
+    <data-source id="cme301-postgresql">
+      <entity id="1" name="supplier" fq-name="lab.supplier" x="60" y="100" color-bg="233,240,250" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="2" name="item_supplier" fq-name="lab.item_supplier" x="430" y="100" color-bg="222,240,236" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="3" name="item" fq-name="lab.item" x="800" y="100" color-bg="233,240,250" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="4" name="category" fq-name="lab.category" x="1170" y="100" color-bg="233,240,250" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="5" name="app_user" fq-name="lab.app_user" x="60" y="580" color-bg="232,225,243" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="6" name="stock_transaction" fq-name="lab.stock_transaction" x="430" y="580" color-bg="233,240,250" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="7" name="lot" fq-name="lab.lot" x="800" y="580" color-bg="233,240,250" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="8" name="stock" fq-name="lab.stock" x="1170" y="580" color-bg="222,240,236" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+      <entity id="9" name="location" fq-name="lab.location" x="1170" y="1060" color-bg="233,240,250" color-fg="23,38,60">
+        <path name="lab" />
+        <path name="cme301_lab" />
+      </entity>
+    </data-source>
+  </entities>
+  <relations>
+    <relation name="item_category_id_fkey" type="fk" pk-ref="4" fk-ref="3" />
+    <relation name="item_supplier_item_id_fkey" type="fk" pk-ref="3" fk-ref="2" />
+    <relation name="item_supplier_supplier_id_fkey" type="fk" pk-ref="1" fk-ref="2" />
+    <relation name="location_parent_id_fkey" type="fk" pk-ref="9" fk-ref="9" />
+    <relation name="lot_item_id_fkey" type="fk" pk-ref="3" fk-ref="7" />
+    <relation name="lot_supplier_id_fkey" type="fk" pk-ref="1" fk-ref="7" />
+    <relation name="stock_lot_id_fkey" type="fk" pk-ref="7" fk-ref="8" />
+    <relation name="stock_location_id_fkey" type="fk" pk-ref="9" fk-ref="8" />
+    <relation name="stock_transaction_lot_id_fkey" type="fk" pk-ref="7" fk-ref="6" />
+    <relation name="stock_transaction_location_id_fkey" type="fk" pk-ref="9" fk-ref="6" />
+    <relation name="stock_transaction_to_location_id_fkey" type="fk" pk-ref="9" fk-ref="6" />
+    <relation name="stock_transaction_user_id_fkey" type="fk" pk-ref="5" fk-ref="6" />
+  </relations>
+</diagram>

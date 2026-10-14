@@ -1,0 +1,19 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.local/
+
+# Local PostgreSQL clusters, caches and intermediate renders
+tmp/
+__pycache__/
+*.py[cod]
+
+# Delivery archives are reproducible; source files are committed instead
+output/*.zip
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

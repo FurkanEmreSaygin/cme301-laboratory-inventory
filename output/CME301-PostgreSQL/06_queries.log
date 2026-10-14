@@ -1,0 +1,94 @@
+SET
+ lot_no | expiry_date 
+--------+-------------
+ T-A1   | 2026-10-24
+ B-1    | 2026-11-03
+(2 rows)
+
+ catalog_no |          name           
+------------+-------------------------
+ ANT-007    | Primary antibody anti-X
+(1 row)
+
+ catalog_no | lot_no |      name      | quantity 
+------------+--------+----------------+----------
+ ANT-007    | AB-1   | Freezer -80 #1 |     3.00
+ BUF-PCR    | B-1    | Freezer -20 #1 |     8.00
+ DNTP-010   | D-1    | Freezer -20 #1 |     1.50
+ ETOH-96    | E-1    | Cabinet C1     |    12.00
+ NAOH-1M    | N-1    | Cabinet C1     |     5.00
+ TAQ-001    | T-A1   | Freezer -20 #1 |     5.00
+ TAQ-001    | T-A2   | Freezer -20 #1 |    15.00
+ TIP-200    | TP-1   | Cabinet C1     |    40.00
+ TUBE-15    | TU-1   | Cabinet C1     |    30.00
+(9 rows)
+
+ catalog_no | on_hand | min_stock 
+------------+---------+-----------
+ DNTP-010   |    1.50 |      2.00
+ KIT-RNA    |       0 |      1.00
+ TUBE-15    |       0 |     10.00
+(3 rows)
+
+ catalog_no 
+------------
+ KIT-RNA
+ TUBE-15
+(2 rows)
+
+ catalog_no 
+------------
+ BUF-PCR
+ DNTP-010
+ KIT-RNA
+ TAQ-001
+ TUBE-15
+(5 rows)
+
+ item_id 
+---------
+       1
+       2
+(2 rows)
+
+        name         | unit | items |  qty  
+---------------------+------+-------+-------
+ Antibodies          | vial |     1 |  3.00
+ Chemicals           | L    |     2 | 17.00
+ PCR Reagents        | kit  |     1 |     0
+ PCR Reagents        | mL   |     3 | 29.50
+ Plastic Consumables | bag  |     1 | 30.00
+ Plastic Consumables | box  |     1 | 40.00
+(6 rows)
+
+      name       
+-----------------
+ Alpha Biotech
+ Beta Scientific
+(2 rows)
+
+    location    |     parent     
+----------------+----------------
+ Lab Room A     | 
+ Freezer -20 #1 | Lab Room A
+ Freezer -80 #1 | Lab Room A
+ Fridge +4 #1   | Lab Room A
+ Shelf 1        | Freezer -20 #1
+ Cabinet C1     | Lab Room A
+(6 rows)
+
+ catalog_no | dbar  | lead_time_days | rop  
+------------+-------+----------------+------
+ BUF-PCR    | 0.022 |              7 | 0.19
+ DNTP-010   | 0.094 |              7 | 0.79
+ DNTP-010   | 0.094 |             14 | 1.59
+ TAQ-001    | 0.222 |              7 | 1.87
+ TAQ-001    | 0.222 |             14 | 3.73
+ TIP-200    | 0.111 |              3 | 0.40
+(6 rows)
+
+ lot_id | location_id | stock_qty | ledger_qty | difference 
+--------+-------------+-----------+------------+------------
+(0 rows)
+
+

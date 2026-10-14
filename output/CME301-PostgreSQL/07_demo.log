@@ -1,0 +1,40 @@
+BEGIN
+SET
+ lot_no | expiry_date | quantity 
+--------+-------------+----------
+ T-A1   | 2026-10-24  |     5.00
+ T-A2   | 2027-02-11  |    15.00
+(2 rows)
+
+CALL
+ lot_no | expiry_date | quantity 
+--------+-------------+----------
+ T-A1   | 2026-10-24  |     0.00
+ T-A2   | 2027-02-11  |    12.00
+(2 rows)
+
+ txn_id | lot_id | location_id | to_location_id | txn_type | quantity | user_id |           txn_time            |      reason       
+--------+--------+-------------+----------------+----------+----------+---------+-------------------------------+-------------------
+     46 |      1 |           2 |                | ISSUE    |     5.00 |       3 | 2026-10-14 09:58:46.725579+03 | presentation-demo
+     47 |      2 |           2 |                | ISSUE    |     3.00 |       3 | 2026-10-14 09:58:46.725579+03 | presentation-demo
+(2 rows)
+
+ item_id | catalog_no |                name                | on_hand | min_stock 
+---------+------------+------------------------------------+---------+-----------
+       2 | DNTP-010   | dNTP Mix                           |    1.50 |      2.00
+       6 | TUBE-15    | Microcentrifuge tubes 1.5 mL (bag) |       0 |     10.00
+       9 | KIT-RNA    | RNA extraction kit                 |       0 |      1.00
+(3 rows)
+
+ catalog_no |   item_name    | lot_no | expiry_date | days_left | quantity 
+------------+----------------+--------+-------------+-----------+----------
+ BUF-PCR    | 10x PCR Buffer | B-1    | 2026-11-03  |        20 |     8.00
+(1 row)
+
+ catalog_no |             item_name              | lot_no | expiry_date | quantity 
+------------+------------------------------------+--------+-------------+----------
+ TUBE-15    | Microcentrifuge tubes 1.5 mL (bag) | TU-1   | 2026-10-09  |    30.00
+(1 row)
+
+ROLLBACK
+

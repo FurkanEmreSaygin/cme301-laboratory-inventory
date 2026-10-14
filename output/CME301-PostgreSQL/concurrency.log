@@ -1,0 +1,28 @@
+Concurrent issue: PASS (8 available; two requests of 6; one succeeds; final quantity 2.00)
+BEGIN
+CALL
+ pg_sleep 
+----------
+ 
+(1 row)
+
+COMMIT
+BEGIN
+ERROR:  P0001: Insufficient unexpired stock: short by 4.00
+CONTEXT:  PL/pgSQL function sp_issue_stock(integer,numeric,integer,text) line 16 at RAISE
+LOCATION:  exec_stmt_raise, pl_exec.c:3911
+
+Concurrent receipt: PASS (one lot, total quantity 4.00)
+BEGIN
+CALL
+ pg_sleep 
+----------
+ 
+(1 row)
+
+COMMIT
+BEGIN
+CALL
+COMMIT
+
+Final ledger reconciliation: PASS (zero discrepancies)
